@@ -9,7 +9,6 @@ def filter_data(start_date,stop_date,pace,operator,leather,output,operator_boole
     df=df.loc[(df['date']>=start_date) & (df['date']<=stop_date)]
     df1=df.copy()
     df1['scan per sqm']=df['time']/df['scanned area']
-    print("PULILIII",(operator_boolean), (operator==[]),operator_boolean,operator)
     if not (operator_boolean) and not((operator==[])):
         df1=df1[df1['OperatorID'].isin(list(operator))]
     if not (leather_boolean) and not(leather==[]):

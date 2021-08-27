@@ -40,7 +40,7 @@ if button:
     },ignore_index=True)
     template_data.to_csv("template_data.csv")
 with col3:
-    st.table(template_data[['Template','Instance Name']])
+    st.table(template_data[['Template','Instance Name','start_date','stop_date','pace','all_operators','operator_id','all_leather_type','leather_type','output']])
     with st.form("Delete Row"):
         delete_row=st.number_input(min_value=0,max_value=template_data.shape[0],step=None,value=0,key="Delete Instance",label="Delete Instance")
         delete=st.form_submit_button("Delete")
