@@ -5,7 +5,6 @@ from datetime import date
 import datetime as dt
 df=pd.read_csv("template_data.csv")
 print(df.columns)
-df1=pd.read_csv("Scan_data.csv")
 def view_template(row):
     df3=df[['Template', 'Instance Name', 'all_leather_types', 'all_operators',
        'leather_type', 'operator_id', 'pace', 'start_date', 'stop_date',
