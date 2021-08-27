@@ -6,7 +6,8 @@ from datetime import date
 def filter_data(start_date,stop_date,pace,operator,leather,output,operator_boolean,leather_boolean):
     df=pd.read_csv("Scan_data.csv")
     df['date']=pd.to_datetime(df['date']).dt.date
-    df1=df.loc[(df['date']>=start_date) & (df['date']<=stop_date)]
+    # df=df.loc[(df['date']>=start_date) & (df['date']<=stop_date)]
+    df1=df.copy()
     df1['scan per sqm']=df['time']/df['scanned area']
     print(df1)
     if not operator_boolean:
